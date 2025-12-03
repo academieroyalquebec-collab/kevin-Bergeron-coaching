@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Centre de Haute Performance Golf – Pré-lancement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      background: #f5f5f5;
+      color: #111827;
+    }
+
+    header {
+      background: #111827;
+      color: #f9fafb;
+      padding: 12px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 32px 0 48px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: #4b5563;
+      margin-bottom: 20px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: #111827;
+      color: #f9fafb;
+    }
+
+    .btn-primary:hover {
+      background: #020617;
+    }
+
+    .btn-secondary {
+      background: #f9fafb;
+      color: #111827;
+      border-color: #d1d5db;
+    }
+
+    .btn-secondary:hover {
+      background: #e5e7eb;
+    }
+
+    .hero-note {
+      font-size: 0.82rem;
+      color: #6b7280;
+    }
+
+    .hero-card {
+      background: #111827;
+      color: #f9fafb;
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .hero-card h2 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #facc15;
+      color: #111827;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .card {
+      background: white;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-bottom: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      color: #374151;
+      margin-top: 4px;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    footer {
+      padding: 16px 0 24px;
+      font-size: 0.8rem;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      header {
+        position: static;
+      }
+
+      .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav-bar">
+    <div class="brand">
+      Centre Haute Performance Golf
+      <span style="font-weight:400; font-size:0.7rem; opacity:0.8;">(pré-lancement)</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#programmes">Programmes</a></li>
+        <li><a href="#camps">Camps</a></li>
+        <li><a href="evaluations-fitting.html">Évaluations &amp; Fitting</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1 class="hero-title">Développez l’athlète complet. Un nouveau centre de haute performance arrive bientôt.</h1>
+      <p class="hero-subtitle">
+        Coaching technique, préparation mentale, statistiques avancées, évaluations complètes, fitting et
+        centre intérieur conçu pour les golfeurs engagés – juniors, élites, adultes.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Être contacté</a>
+        <a href="#programmes" class="btn btn-secondary">Voir les programmes</a>
+      </div>
+      <p class="hero-note">
+        Site pré-lancement : la structure est en place, le branding complet et les visuels suivront.
+      </p>
+    </div>
+    <div class="hero-card">
+      <span class="badge">Élite & développement</span>
+      <h2>Kevin Bergeron</h2>
+      <p>
+        Entraîneur de golf spécialisé en développement à long terme, préparation aux compétitions et
+        psychologie de la performance. Encadrement de jeunes, universitaires, élites et adultes motivés.
+      </p>
+      <ul>
+        <li>Entraîneur de l’année (RSEQ)</li>
+        <li>Plusieurs titres de champion provincial universitaire</li>
+        <li>Responsable de structures sport-études et programmes élites</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- A PROPOS -->
+  <section id="apropos">
+    <h2>À propos</h2>
+    <p class="section-subtitle">
+      Un environnement structuré pour développer la technique, le physique, le mental et les habiletés
+      stratégiques des golfeurs – du primaire jusqu’à l’universitaire et aux adultes engagés.
+    </p>
+    <div class="card">
+      <p>
+        Le futur Centre de Haute Performance Golf rassemblera sous un même toit : entraînement intérieur,
+        évaluations complètes, préparation physique spécifique, coaching mental et suivi statistique.
+      </p>
+      <p>
+        En attendant l’ouverture officielle du centre et le déploiement complet du branding, ce site
+        sert de point de contact pour les programmes existants (sport-études, élite, camps, coaching VIP
+        adultes, évaluations et fitting).
+      </p>
+    </div>
+  </section>
+
+  <!-- PROGRAMMES -->
+  <section id="programmes">
+    <h2>Programmes</h2>
+    <p class="section-subtitle">
+      Une structure claire du primaire jusqu’aux adultes, avec des offres adaptées à chaque niveau
+      d’engagement et d’ambition.
+    </p>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Sport-étude primaire</h3>
+        <p>
+          Structure en développement pour initier les plus jeunes à un encadrement scolaire-sportif
+          de qualité, avec une progression adaptée à l’âge.
+        </p>
+        <span class="tag">À venir</span>
+      </div>
+
+      <div class="card">
+        <h3>Sport-étude secondaire</h3>
+        <p>
+          Programme structuré pour les athlètes du secondaire qui souhaitent s’entraîner sérieusement
+          tout en conciliant études et golf de performance.
+        </p>
+        <ul>
+          <li>Blocs d’entraînement encadrés</li>
+          <li>Suivi technique et statistique</li>
+          <li>Préparation aux compétitions</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Sport-étude Cégep</h3>
+        <p>
+          Continuum naturel après le secondaire pour les joueurs qui visent le golf universitaire ou
+          des objectifs de haute performance.
+        </p>
+        <span class="tag">À venir</span>
+      </div>
+
+      <div class="card">
+        <h3>Élite Royal Québec</h3>
+        <p>
+          Programme élite pour les athlètes motivés à se mesurer aux meilleurs et à structurer leur
+          développement à long terme.
+        </p>
+        <ul>
+          <li>Entraînements orientés performance</li>
+          <li>Planification annuelle</li>
+          <li>Accompagnement en compétition</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Développement junior</h3>
+        <p>
+          Pour les jeunes golfeurs qui veulent progresser techniquement, apprendre à s’entraîner et
+          vivre une expérience structurée et motivante.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Coaching privé</h3>
+        <p>
+          Séances individuelles centrées sur les besoins spécifiques : technique, trajectoires, stratégie,
+          routine, gestion de tournois.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Coaching mental & performance</h3>
+        <p>
+          Développement des habiletés mentales : focus, confiance, routines, gestion des émotions,
+          préparation avant/pendant/après les rondes.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Coaching VIP Adultes – 12 places</h3>
+        <p>
+          Programme annuel exclusif pour 12 adultes motivés qui souhaitent un encadrement digne des
+          athlètes élites.
+        </p>
+        <ul>
+          <li>Évaluation complète en début de saison</li>
+          <li>Plan d’amélioration personnalisé</li>
+          <li>Accès privilégié au centre intérieur pour la pratique libre</li>
+        </ul>
+        <span class="tag">Sur invitation</span>
+      </div>
+
+      <div class="card">
+        <h3>Évaluations & Fitting</h3>
+        <p>
+          Évaluation de performance, fitting complet et services de réparation de bâtons offerts dans
+          le futur centre intérieur.
+        </p>
+        <p style="font-size:0.85rem;">
+          Détails complets sur la page
+          <a href="evaluations-fitting.html">Évaluations &amp; Fitting</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPS -->
+  <section id="camps">
+    <h2>Camps de golf</h2>
+    <p class="section-subtitle">
+      Camps structurés pour s’entraîner en conditions extérieures, préparer la saison et développer
+      la performance en tournoi.
+    </p>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Camps en Floride – courts</h3>
+        <p>
+          Camps de 2 semaines axés sur le retour au jeu, le volume de jeu et l’adaptation aux conditions
+          extérieures.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Camp parent/enfant</h3>
+        <p>
+          Expérience unique permettant de vivre le camp ensemble, tout en travaillant la performance
+          et la relation athlète-parent.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Camp long – haute performance</h3>
+        <p>
+          Bloc prolongé avec intégration de compétitions, feedback régulier, et objectifs de progression
+          mesurables.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact & inscriptions</h2>
+    <p class="section-subtitle">
+      Pour plus d’informations sur les programmes, les camps, le coaching VIP adultes ou les
+      évaluations & fittings, écrivez-moi directement.
+    </p>
+    <div class="card">
+      <p><strong>Courriel :</strong> &lt;ton courriel ici&gt;</p>
+      <p><strong>Téléphone :</strong> &lt;ton numéro ici&gt;</p>
+      <p style="margin-top:8px;">
+        Vous pouvez aussi décrire brièvement votre situation (âge de l’athlète, objectifs, programmes
+        qui vous intéressent) et vous serez recontacté avec les options les plus adaptées.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Site pré-lancement – structure et contenu amenés à évoluer avec le branding final et l’ouverture du centre.
+</footer>
+</body>
+</html>
